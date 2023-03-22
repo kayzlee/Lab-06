@@ -1,3 +1,5 @@
+# Kaylee Zamora - Lab 06
+
 encoder(password):
     encoder = ''
     password_str = str(password)
