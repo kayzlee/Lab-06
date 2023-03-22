@@ -1,11 +1,19 @@
 # Kaylee Zamora - Lab 06
 
-encoder(password):
+def encoder(password):
     encoder = ''
     password_str = str(password)
     for i in range(len(password_str)):
         encoder += str(int(password_str[i]) + 3)
     return encoder
+
+def decode(code):
+    cList = list(code)
+    cList = [int(i) for i in cList]
+    cList = [((j+10)-3) % 10 for j in cList]
+    cList = [str(k) for k in cList]
+    password = "".join(cList)
+    return password
 
 def main():
     is_valid_input = True
@@ -22,6 +30,7 @@ def main():
             new_password = encoder(password)
             print('Your password has been encoded and stored!')
         elif option == 2:
+            password = decode(new_password)
             print('Your encoded password is ', new_password , ', and the original password is ', password, '.')
         elif option == 3:
             break
