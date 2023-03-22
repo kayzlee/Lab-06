@@ -22,7 +22,7 @@ def main():
             new_password = encoder(password)
             print('Your password has been encoded and stored!')
         elif option == 2:
-            print('Your encoded password is ', new_password , ', the original password is ', password, '.')
+            print('Your encoded password is ', new_password , ', and the original password is ', password, '.')
         elif option == 3:
             break
 
